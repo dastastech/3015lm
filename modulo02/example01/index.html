@@ -13,20 +13,6 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, animi qui! Debitis saepe, repellat sequi ab magnam animi. Enim vero beatae voluptatum quas aperiam neque voluptas numquam alias perspiciatis ipsum.</p>
     <button type='button' id='btn'>Click Me!</button>
 
-    <script>
-        // alert('Hola Mundo!!'); // Pause till user hit "OK"
-        const boton = document.getElementById('btn');
-        boton.addEventListener('click', cambiarTexto);
-
-        function cambiarTexto() {
-            const elementoH1 = document.getElementsByClassName('aviso');
-            for (i=0; i<=1; i = i + 1) {
-                elementoH1[i].innerHTML = 'TITULO PRINCIPAL';
-                elementoH1[i].style.color = 'red';
-                elementoH1[i].style.fontFamily = 'sans-serif';
-                elementoH1[i].style.fontSize = '5em';
-            }        
-        }
-    </script>
+    <script src='./js/script.js'></script>
 </body>
 </html>
