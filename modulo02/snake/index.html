@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div id="game-board"></div>
+    <script>
+        $(document).ready(function() {
+            let direction = 'right';
+
+            $(document).keydown(function(event) {
+                switch(event.key) {
+                    case 'ArrowUp':
+                        if (direction != "down") direction = 'up';
+                        break;
+                    case 'ArrowDown':
+                        if (direction != "up") direction = 'down';
+                        break;
+                    case 'ArrowLeft':
+                        if (direction != "right") direction = 'left';
+                        break;
+                    case 'ArrowRight':
+                        if (direction != "left") direction = 'right';
+                        break;
+                }
+                console.log(direction)
+            });            
+
+        });
+    </script>
+
+</body>
+</html>
