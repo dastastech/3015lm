@@ -13,18 +13,48 @@
         <h3>Formulario muy sencillo</h3>
 
         <form action="manejarDatos.php" method="get">   
-            <label>Username:</label>  
+            <select name="so" id="so">
+                <option value="windows">Windows</option>
+                <option value="linux">Linux</option>
+                <option value="macos">MacOS</option>
+                <option value="ios">iOS</option>
+                <option value="android">Android</option>
+                <option value="otros">Otros</option>
+            </select>
+            <br/>
+            <select name="so" id="so" multiple >
+                <option value="windows">Windows</option>
+                <option value="linux ">Linux</option>
+                <option value="macos">MacOS</option>
+                <option value="ios">iOS</option>
+                <option value="android">Android</option>
+                <option value="otros">Otros</option>
+            </select>
+            <br/>
+            <input type="number" name="edad" id="edad" value="1" min="0" max="13">
+            <br/>
+            <input type="range" name="valor" id="valor" min="100" max="150" step="10"
+                oninput="outputValor.value = valor.value">
+            <output id="outputValor">100</output>%
+            <br/>
+            <input type="date" name="fecha" id="fecha">
+            <input type="time" name="hora" id="hora">
+            <input type="week" name="semana" id="semana">
+            <input type="datetime" name="" id="">
+            <br/>
+
+            <label>Username:</label>
             <input class='form-control' type="text" name="nombre" value="" 
-                    placeholder="Username"/>   
+                    placeholder="Username" required/>   
 
             <label>Password:</label>  
             <input  class='form-control' type="password" name="clave" value="" 
                 placeholder="Password"/>  
                 
             <label>Fruta Favorita</label>
-            <input type="checkbox" name='fruta[]' value="manzana" id="fruta1">
+            <input type="checkbox" name='fruta[]' value="manzana" id="fruta1" >
             <label for="fruta1">Apple</label>
-            <input type="checkbox" name='fruta[]' value="pera" id="fruta2">
+            <input type="checkbox" name='fruta[]' value="pera" id="fruta2" >
             <label for="fruta2">Pear</label>
             <input type="checkbox" name='fruta[]' value="kiwi" id="fruta3">
             <label for="fruta3">Kiwi</label>
@@ -41,9 +71,16 @@
 
             <input type="hidden" name="escondido" value="secreto1234">
             <br />
+            <input type="file" name="archivo" id="">
+            <br />
             <input type="submit" class='btn btn-primary' value="Enviar" /> 
             <input type="reset" class='btn btn-secondary' value="Cancelar" /> 
-
+            <br/><br/>
+            <input type="image" width="100px" src="https://cdn.pixabay.com/animation/2023/01/26/16/56/16-56-52-749_512.gif" alt="">
+            <br/>
+            <textarea name="description" id="description" maxlength="50" rows="3" cols="60"></textarea>
+            <br/><br/><br/><br/>
+           
         </form>
         
     </div>
