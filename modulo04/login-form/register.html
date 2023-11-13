@@ -10,46 +10,47 @@
 <body>
 
     <div class="container p-5">
-        <div class="card">
-            <div class="card-header">
-                <h3>Register Form</h3>
-            </div>
-            <div class="card-body">
-                <form method="post">
-                    <div class="mb-3">
-                        <label class="form-label">Name</label>
-                        <input type="text" name="name" id="name"
-                                class="form-control"
-                                placeholder="John Doe Smith">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Username</label>
-                        <input type="email" name="username" id="username"
-                                class="form-control"
-                                placeholder="Email: johndoe@domain.com">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input type="password" name="pwd" id="pwd"
-                                class="form-control" 
-                                placeholder="Password"
+        <form method="post">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Register Form</h3>
+                </div>
+                <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" name="name" id="name"
+                                    class="form-control"
+                                    placeholder="John Doe Smith">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="email" name="username" id="username"
+                                    class="form-control"
+                                    placeholder="Email: johndoe@domain.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="pwd" id="pwd"
+                                    class="form-control" 
+                                    placeholder="Password"
+                                    pattern="[A-Za-z0-9]{8,15}"
+                                    title="Error on password input.">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Confirmation Password</label>
+                            <input type="password" name="confirmPwd" id="confirmPwd" 
+                                class="form-control" placeholder="Confirm Password" required
                                 pattern="[A-Za-z0-9]{8,15}"
                                 title="Error on password input.">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Confirmation Password</label>
-                        <input type="password" name="confirmPwd" id="confirmPwd" 
-                            class="form-control" placeholder="Confirm Password" required
-                            pattern="[A-Za-z0-9]{8,15}"
-                            title="Error on password input.">
-                    </div> 
-                </form>
+                        </div> 
+                </div>
+                <div class="card-footer text-end">
+                    <a href="index.html" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
             </div>
-            <div class="card-footer text-end">
-                <a href="index.html" class="btn btn-secondary">Cancel</a>
-                <button type="submit" class="btn btn-primary">Save</button>
-            </div>
-        </div>
+        </form>
+
     </div>
     
 </body>
